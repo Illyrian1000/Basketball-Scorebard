@@ -67,7 +67,9 @@ let time = startingMinutes * 60;
 
 const countdownElement = doucment.getElementById("timer");
 
-function countdownTimer(){
+setInterval(countdownTimer, 1000){
+    
+    function countdownTimer(){
     
     const minutes = Math.floor( time / 60 );
 
@@ -76,4 +78,5 @@ function countdownTimer(){
     countdownElement.innerHTML = minutes + " : " + seconds;
 
     time--;
+}
 }
