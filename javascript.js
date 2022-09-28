@@ -9,7 +9,7 @@ let elementGuestHeader = document.getElementById("guestHeader");
 
 // change score for home team
 
-function homePlus(n){
+function homePlus(n) {
     homePoints += (n * 1);
     document.getElementById("homeScore").innerHTML = homePoints;
     scoreBalance();
@@ -19,27 +19,27 @@ function homePlus(n){
 // change score for guest team
 
 
-function guestPlus(n){
+function guestPlus(n) {
     guestPoints += (n * 1);
     document.getElementById("guestScore").innerHTML = guestPoints;
     scoreBalance();
 }
 
 
-function scoreBalance(){
+function scoreBalance() {
     let homeScorex = document.getElementById("homeScore").innerHTML;
     homeScorex = homeScorex * 1;
 
     let guestScorex = document.getElementById("guestScore").innerHTML;
     guestScorex = guestScorex * 1;
 
-    if (homeScorex > guestScorex){
+    if (homeScorex > guestScorex) {
 
         elementHomeHeader.classList.add("winner");
         elementGuestHeader.classList.remove("winner");
 
 
-    } else if( homeScorex < guestScorex){
+    } else if (homeScorex < guestScorex) {
         elementGuestHeader.classList.add("winner");
         elementHomeHeader.classList.remove("winner");
     } else {
@@ -50,7 +50,7 @@ function scoreBalance(){
 
 // reset the game to 0 - 0 NEW GAME
 
-function newGame(){
+function newGame() {
 
     homePoints = 0;
     guestPoints = 0;
@@ -59,23 +59,38 @@ function newGame(){
 
     elementHomeHeader.classList.remove("winner");
     elementGuestHeader.classList.remove("winner");
+    totalTime = 0;
 }
 
 
-const startingMinutes = 12;
-let time = startingMinutes * 60;
 
-const countdownElement = doucment.getElementById("timer");
 
-setInterval(countdownTimer, 1000);
-    
-    function countdownTimer(){
-    
-    const minutes = Math.floor( time / 60 );
+const initialTime = 12;
+let totalTime = initialTime * 60;
 
-    let seconds = time % 60;
+let timerElement = document.getElementById("timer");
 
-    countdownElement.innerHTML = minutes + " : " + seconds;
+function test1(){
+    const min = Math.floor(totalTime / 60);
+    let sec = totalTime % 60;
 
-    time--;
+    if ( sec < 10){
+        sec = "0" + sec;
+    }
+
+    var exactTime = min + " : " + sec;
+
+    timerElement.innerHTML = exactTime;
+
+    totalTime--;
+}
+
+function test2(){
+    document.getElementById("startGame").style.display = "none";
+    document.getElementById("stopGame").style.display = "flex";
+    const myInterval = setInterval(test1, 1000);
+}
+
+function test3(){
+    clearInterval(myInterval);
 }
