@@ -1,6 +1,10 @@
 let homePoints = 0;
 let guestPoints = 0;
 
+let elementHomeHeader = document.getElementById("homeHeader");
+let elementGuestHeader = document.getElementById("guestHeader");
+
+
 
 
 // change score for home team
@@ -8,9 +12,7 @@ let guestPoints = 0;
 function homePlus(n){
     homePoints += (n * 1);
     document.getElementById("homeScore").innerHTML = homePoints;
-
-    console.log(homePoints);
-    console.log(guestPoints);
+    scoreBalance();
 }
 
 
@@ -20,8 +22,31 @@ function homePlus(n){
 function guestPlus(n){
     guestPoints += (n * 1);
     document.getElementById("guestScore").innerHTML = guestPoints;
+    scoreBalance();
 }
 
+
+function scoreBalance(){
+    let homeScorex = document.getElementById("homeScore").innerHTML;
+    homeScorex = homeScorex * 1;
+
+    let guestScorex = document.getElementById("guestScore").innerHTML;
+    guestScorex = guestScorex * 1;
+
+    if (homeScorex > guestScorex){
+
+        elementHomeHeader.classList.add("winner");
+        elementGuestHeader.classList.remove("winner");
+
+
+    } else if( homeScorex < guestScorex){
+        elementGuestHeader.classList.add("winner");
+        elementHomeHeader.classList.remove("winner");
+    } else {
+        elementHomeHeader.classList.remove("winner");
+        elementGuestHeader.classList.remove("winner");
+    }
+}
 
 // reset the game to 0 - 0 NEW GAME
 
@@ -31,6 +56,9 @@ function newGame(){
     guestPoints = 0;
     document.getElementById("homeScore").innerHTML = homePoints;
     document.getElementById("guestScore").innerHTML = guestPoints;
+
+    elementHomeHeader.classList.remove("winner");
+    elementGuestHeader.classList.remove("winner");
 }
 
 
