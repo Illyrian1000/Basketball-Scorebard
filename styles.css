@@ -8,6 +8,18 @@ body {
     background-color: rgb(8, 8, 34);
 }
 
+#timer{
+    position: absolute;
+    top: -100px;
+    left: 230px;
+    display: flex;
+    margin: auto;
+    width: 36px;
+    color: white;
+    border: 2px #9AABD8 solid;
+    padding: 20px 40px;
+}
+
 .mainContainer {
     position: relative;
     background-color: #1B244A;

@@ -62,4 +62,18 @@ function newGame(){
 }
 
 
+const startingMinutes = 12;
+let time = startingMinutes * 60;
+
+const countdownElement = doucment.getElementById("timer");
+
+function countdownTimer(){
     
+    const minutes = Math.floor( time / 60 );
+
+    let seconds = time % 60;
+
+    countdownElement.innerHTML = minutes + " : " + seconds;
+
+    time--;
+}
