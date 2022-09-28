@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(8, 8, 34);
+}
+
+.mainContainer {
+    position: relative;
+    background-color: #1B244A;
+    width: 600px;
+    height: 430px;
+    margin: auto;
+    margin-top: 160px;
+    border: 3px solid white;
+}
+
+.innerContainer {
+    width: 440px;
+    height: 260px;
+    margin: auto;
+    padding-top: 70px;
+    display: flex;
+    color: white;
+}
+
+.scoreContainer2 {
+    margin-left: 130px;
+}
+
+h1 {
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
+    text-align: center;
+    color: #EEEEEE;
+    margin-bottom: 20px;
+}
+
+.winner{
+    font-size: 50px;
+    color: yellow;
+    text-decoration: underline;
+}
+
+.scoreBackground {
+    width: 155px;
+    height: 120px;
+    text-align: center;
+    background: #080001;
+    border-radius: 5px;
+    margin-bottom: 26px;
+}
+
+#homeScore,
+#guestScore {
+    font-family: 'Cursed Timer ULiL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    text-align: center;
+    color: #F94F6D;
+}
+
+.addPointsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.scoreButton {
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #9AABD8;
+    font-family: 'Cursed Timer ULiL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    padding: 9px 5px;
+    margin: 0 6px 0 1px;
+    cursor: pointer;
+}
+
+.scoreButton:hover{
+    color: #1B244A;
+    background-color: #9AABD8;
+}
+
+#newGame{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+    background-color: transparent;
+    color: #9AABD8;
+    font-weight: 400;
+    font-size: 18px;    
+    font-family: 'Verdana';
+    cursor: pointer;
+}
+
+#newGame:hover{
+    color: #1B244A;
+    background-color: #9AABD8;
+}

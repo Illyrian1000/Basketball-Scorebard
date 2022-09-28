@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/verdana" rel="stylesheet">
+                
+                
+
+</head>
+<body>  
+
+    <div class="mainContainer">
+        <div class="innerContainer">
+
+            <div class="scoreContainer1">
+
+
+                <h1 id="homeHeader">HOME</h1>
+                <div class="scoreBackground">
+                    <p id="homeScore"> 0 </p>
+                </div>
+                <div class="addPointsContainer">
+                    <button onclick="homePlus(this.innerHTML)" class="scoreButton">+1</button>
+                    <button onclick="homePlus(this.innerHTML)"  class="scoreButton">+2</button>
+                    <button onclick="homePlus(this.innerHTML)"  class="scoreButton">+3</button>
+                </div>
+
+
+            </div>
+            
+
+            <div class="scoreContainer2">
+
+
+                <h1 id="guestHeader">GUEST</h1>
+                <div class="scoreBackground">
+                    <p id="guestScore"> 0 </p>
+                </div>
+                <div class="addPointsContainer">
+                    <button onclick="guestPlus(this.innerHTML)" class="scoreButton">+1</button>
+                    <button onclick="guestPlus(this.innerHTML)"  class="scoreButton">+2</button>
+                    <button onclick="guestPlus(this.innerHTML)"  class="scoreButton">+3</button>
+                </div>
+
+
+            </div>
+    
+        </div>
+
+        <button onclick="newGame()" id="newGame"> NEW GAME</button>
+    </div>
+
+
+
+    
+
+    <script src="javascript.js"></script>
+</body>
+</html>
