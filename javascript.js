@@ -59,7 +59,6 @@ function newGame() {
 
     elementHomeHeader.classList.remove("winner");
     elementGuestHeader.classList.remove("winner");
-    totalTime = 0;
 }
 
 
@@ -70,11 +69,11 @@ let totalTime = initialTime * 60;
 
 let timerElement = document.getElementById("timer");
 
-function test1(){
-    const min = Math.floor(totalTime / 60);
+function test1() {
+    const min = Math.floor(totalTime / 60, 10);
     let sec = totalTime % 60;
 
-    if ( sec < 10){
+    if (sec < 10) {
         sec = "0" + sec;
     }
 
@@ -85,12 +84,14 @@ function test1(){
     totalTime--;
 }
 
-function test2(){
-    document.getElementById("startGame").style.display = "none";
-    document.getElementById("stopGame").style.display = "flex";
-    const myInterval = setInterval(test1, 1000);
-}
 
-function test3(){
-    clearInterval(myInterval);
-}
+// var myInterval = setInterval(test1, 1000);
+
+// function test2() {
+//     document.getElementById("startGame").style.display = "none";
+//     document.getElementById("stopGame").style.display = "flex";
+// }
+
+// function test3() {
+//     clearInterval(myInterval);
+// }

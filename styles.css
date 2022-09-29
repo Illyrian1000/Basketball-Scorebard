@@ -8,17 +8,17 @@ body {
     background-color: rgb(8, 8, 34);
 }
 
-#timer{
+/* #timer{
     position: absolute;
     top: -100px;
     left: 230px;
     display: flex;
     margin: auto;
-    width: 50px;
+    width: 115px;
     color: white;
     border: 2px #9AABD8 solid;
-    padding: 20px 40px;
-}
+    font-size: 40px;
+} */
 
 .mainContainer {
     position: relative;
@@ -130,6 +130,27 @@ h1 {
 }
 
 
-#stopGame{
+/* #stopGame{
     display: none;
+} */
+
+/* .startStop{
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: 2px solid #9AABD8;
+    background-color: transparent;
+    color: #9AABD8;
+    font-weight: 400;
+    font-size: 18px;    
+    font-family: 'Verdana';
+    cursor: pointer;
 }
+
+.startStop:hover{
+    
+    color: #1B244A;
+    background-color: #9AABD8;
+} */
